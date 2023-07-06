@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Pirata+One|Rubik:900');
+
 .popup {
     position: fixed;
     top: 0;
@@ -16,10 +18,21 @@
     width: 100%;
     max-width: 660px;
     background-color: #fff;
+    border-radius: 12px;
 }
 
 .popup-inner .close-btn {
     position: absolute;
     top: 16px;
     right: 16px;
+}
+
+.mint {
+    font-family: 'Pirata One', cursive;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.img {
+    margin: auto;
 }

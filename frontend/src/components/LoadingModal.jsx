@@ -1,10 +1,12 @@
 import React from "react";
 import "./LoadingModal.css"
+import duck from "../images/duck-searching.gif"
 const BasicUsage = () => {
     return  (
         <div className="popup">
             <div className="popup-inner">
-                <h1>Your Data is Loading....</h1>
+                <img src={duck} className="img"/>
+                <h1 className="mint">Your Data is Loading....</h1>
             </div>
         </div>
     );

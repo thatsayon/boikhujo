@@ -17,6 +17,7 @@ function Home() {
   const handleKeyDown = (event) => {
     if (event.key == 'Enter') {
       fetchInfo();
+      setLoading(true);
     }
   }
   return (
