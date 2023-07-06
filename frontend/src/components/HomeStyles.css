@@ -9,7 +9,7 @@
 
 .input-wrapper {
   position: absolute;
-  top: 40%;
+  top: 22rem;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: white;
@@ -37,4 +37,8 @@ input:focus {
 
 #search-icon:hover {
   cursor: pointer;
+}
+
+.table {
+  padding-top: 2.5rem;
 }

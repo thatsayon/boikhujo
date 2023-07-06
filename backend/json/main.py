@@ -1,10 +1,14 @@
 from flask import Flask, jsonify, request
+from flask_cors import CORS, cross_origin
 import json
 import sys 
 sys.path.insert(1, '../scraping')
 from scraping import save_json
 
 app = Flask(__name__)
+app.config['SECRET_KEY'] = 'the quick brown fox jumps over the lazy   dog'
+app.config['CORS_HEADERS'] = 'Content-Type'
+cors = CORS(app, resources={r"/foo": {"origins": "*"}})
 
 @app.route('/', methods = ['GET', 'POST'])
 def home():
@@ -13,6 +17,7 @@ def home():
         return jsonify({'datra': data})
 
 @app.route('/book', methods = ['GET'])
+@cross_origin(origin='localhost',headers=['Content- Type','Authorization'])
 def books():
     book_name = request.args.get('name')
 

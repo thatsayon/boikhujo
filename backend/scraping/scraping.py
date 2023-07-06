@@ -36,5 +36,6 @@ def save_json(book_name):
     sorted_book_list = sorted(
         book_list, key=lambda x: int(x['price'].replace(',', '')))
 
+    book_list.clear()
     final_res = json.dumps(sorted_book_list)
     return final_res
