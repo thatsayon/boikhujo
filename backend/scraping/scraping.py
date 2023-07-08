@@ -2,7 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 import pandas as pd
 import json 
-
+import undetected_chromedriver as uc
 book_list = []
 def data_from_daraz(name):
     bs = len(name)
