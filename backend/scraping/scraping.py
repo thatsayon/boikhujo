@@ -2,12 +2,13 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 import pandas as pd
 import json 
-import undetected_chromedriver as uc
 book_list = []
 def data_from_daraz(name):
     bs = len(name)
     url = f'https://www.daraz.com.bd/catalog/?q={name}'
-    driver = webdriver.Chrome()
+    op = webdriver.ChromeOptions()
+    op.add_argument('--headless')
+    driver = webdriver.Chrome(options=op)
     driver.get(url)
 
 

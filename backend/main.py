@@ -2,7 +2,7 @@ from flask import Flask, jsonify, request
 from flask_cors import CORS, cross_origin
 import json
 import sys 
-sys.path.insert(1, '../scraping')
+sys.path.insert(1, './scraping')
 from scraping import save_json
 
 app = Flask(__name__)
